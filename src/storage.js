@@ -1,17 +1,5 @@
-// the only admin, created by default
-const DEFAULT_ADMIN = {
-  id: 'admin',
-  name: 'Admin',
-  email: 'admin@gmail.com',
-  password: 'admin123',
-  phone: '',
-  department: '',
-  salary: '',
-  role: 'admin',
-}
-
 export const getUsers = () => {
-  return JSON.parse(localStorage.getItem('users')) || [DEFAULT_ADMIN]
+  return JSON.parse(localStorage.getItem('users')) || []
 }
 
 export const saveUsers = (users) => {

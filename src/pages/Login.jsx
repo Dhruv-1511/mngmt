@@ -30,8 +30,6 @@ const Login = ({ onLogin }) => {
 
         <button className="btn w-full mt-2">Login</button>
 
-        <p className="text-xs text-gray-500 text-center mt-3">Admin: admin@gmail.com / admin123</p>
-
         <p className="text-sm text-center mt-4">
           Don't have an account? <Link to="/register" className="text-blue-600">Register</Link>
         </p>

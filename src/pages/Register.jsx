@@ -15,7 +15,9 @@ const Register = ({ onLogin }) => {
 
     if (users.some((u) => u.email === form.email)) return setError('Email already registered')
 
-    // everyone who registers becomes a normal user
+    // first registered person becomes admin, everyone after that is a normal user
+    const role = users.length === 0 ? 'admin' : 'user'
+
     const newUser = {
       id: Date.now().toString(),
       name: form.name,
@@ -24,7 +26,7 @@ const Register = ({ onLogin }) => {
       phone: '',
       department: '',
       salary: '',
-      role: 'user',
+      role,
     }
     saveUsers([...users, newUser])
     onLogin(newUser)
