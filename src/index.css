@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  button,
+  select {
+    cursor: pointer;
+  }
+  button:disabled,
+  select:disabled,
+  input:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full border border-gray-300 rounded px-3 py-2 mb-3 text-sm outline-none focus:border-blue-500 disabled:bg-gray-100 disabled:text-gray-500;
+  }
+  .label {
+    @apply block text-xs text-gray-600 mb-1;
+  }
+  .btn {
+    @apply bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 cursor-pointer;
+  }
+  .btn-outline {
+    @apply border border-gray-300 px-3 py-1.5 rounded text-sm hover:bg-gray-50 cursor-pointer;
+  }
+}
